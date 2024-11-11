@@ -1,0 +1,78 @@
+#semaforo{
+    position: fixed;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.wrapper{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  button{
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  button span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  button:hover{
+    color: #fff;
+  }
+  
+  button:hover:after{
+    width: 100%;
+  }
+
+
+.lamp{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: silver;
+    margin-top: 5px;
+    border-radius: 90px;
+}
+
+#red{
+    background-color: rgba(255, 0, 0, 0.255);
+}
+#yellow{
+    background-color: rgba(255, 255, 0, 0.225);
+}
+#green{
+    background-color: rgba(0, 255, 0, 0.255);
+}
