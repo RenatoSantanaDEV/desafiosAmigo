@@ -1,3 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+
 #semaforo{
     position: fixed;
     background-color: black;
@@ -45,10 +56,9 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff003b;
+    background: #ffffff93;
     transition: all .35s;
   }
-  
   button:hover{
     color: #fff;
   }
@@ -56,6 +66,13 @@
   button:hover:after{
     width: 100%;
   }
+
+  .grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-items: center;
+}
 
 
 .lamp{
@@ -75,4 +92,10 @@
 }
 #green{
     background-color: rgba(0, 255, 0, 0.255);
+}
+#contador{
+    color: #ff0000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
