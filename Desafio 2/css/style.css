@@ -60,8 +60,8 @@ button:after{
     left: 0;
     width: 0;
     height: 100%;
-    background: #ffffff93;
-    transition: all .35s;
+    background: #0d0d0d;
+    transition: all .60s;
 }
 button:hover{
     color: #fff;

@@ -14,12 +14,12 @@
       <div class="grid">
         <div>
           <label for="pessoa">Nome da pessoa</label>
-          <input type="text" name="nome-da-pessoa" class="prompt" id="pessoa" />
+          <input type="text" name="nome-da-pessoa" class="prompt" id="pessoa" maxlength="50">
         </div>
 
         <div>
           <label for="cpf">CPF</label>
-          <input type="text" name="cpf-da-pessoa" class="prompt" id="cpf" />
+          <input type="text" name="cpf-da-pessoa" placeholder="000.000.000-00" class="prompt" id="cpf" maxlength="14" />
         </div>
 
         <div>
@@ -29,22 +29,26 @@
             name="nasc-da-pessoa"
             class="prompt"
             id="nascimento"
+            maxlength="10"
           />
         </div>
 
         <div>
           <label for="telefone">Telefone</label>
           <input
-            type="text"
+            type="tel"
             name="telefone-da-pessoa"
             class="prompt"
             id="telefone"
+            placeholder="(00) 00000-0000"
+            maxlength="15"
           />
         </div>
         <div class="buttao">
-          <button onclick="" class="salvar">Salvar</button>
+          <button onclick="formataCPF()" class="salvar">Salvar</button>
         </div>
       </div>
     </section>
+    <script src="../Desafio 1/assets/js/script.js"></script>
   </body>
 </html>
