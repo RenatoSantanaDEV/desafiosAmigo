@@ -4,10 +4,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background: #0B486B;
+    background: linear-gradient(
+      to right,
+      #0B486B,#F56217
+    );
+    height: 100vh;
 }
-
-
 
 #semaforo{
     position: fixed;
@@ -20,14 +23,15 @@ body {
 
 }
 
+
 .wrapper{
     position: fixed;
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  
-  button{
+}
+
+button{
     cursor: pointer;
     display: block;
     width: 200px;
@@ -42,14 +46,14 @@ body {
     text-align: center;
     position: relative;
     transition: all .35s;
-  }
-  
-  button span{
+}
+
+button span{
     position: relative;
     z-index: 2;
-  }
-  
-  button:after{
+}
+
+button:after{
     position: absolute;
     content: "";
     top: 0;
@@ -58,22 +62,40 @@ body {
     height: 100%;
     background: #ffffff93;
     transition: all .35s;
-  }
-  button:hover{
+}
+button:hover{
     color: #fff;
-  }
-  
-  button:hover:after{
-    width: 100%;
-  }
+}
 
-  .grid {
+button:hover:after{
+    width: 100%;
+}
+
+.grid {
     display: grid;
     grid-template-rows: auto auto;
     gap: 20px;
     justify-items: center;
 }
 
+#semaforoPedestre{
+    position: fixed;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pedestre-lamp{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: silver;
+    margin-top: 5px;
+    border-radius: 90px;
+}
 
 .lamp{
     position: relative;
@@ -82,6 +104,20 @@ body {
     background-color: silver;
     margin-top: 5px;
     border-radius: 90px;
+}
+
+#pedestrian-red{
+    background-color: rgba(255, 0, 0, 0.255);
+}
+#pedestrian-green{
+    background-color: rgba(0, 255, 0, 0.255);
+}
+.passagem{
+    font-family: Sans-serif;
+    color: #ff0000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #red{
