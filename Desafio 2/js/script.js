@@ -6,9 +6,7 @@
 //ok
 // Ao clicar no botão para FECHAR se o semáforo estiver verde, ele deve aguardar 3 segundos até fechar. 
 // Se ao clicar para fechar estiver no amarelo continua o processo de fechamento.
-
 // Informe ao lado do semáforo o tempo do sinal atual em segundos (menos para sinal amarelo)
-
 function Timer(callback, delay) {
     return setTimeout(callback, delay);
 }
@@ -26,7 +24,6 @@ const contadores = document.querySelector('.contadores');
 let flag = false;
 let contador = 60;
 let contadorVerde = 10;
-var espera;
 
 relogio.innerHTML = `FECHAR`;
 
@@ -46,7 +43,7 @@ function intervalo (contador){
 
 if(flag === false){
     botao.addEventListener('click', function(){
-        contadorVerde = 3;
+        // contadorVerde = 3;
         flag = true;
         botao.disabled = true;
 
@@ -70,20 +67,18 @@ if(flag === false){
 }
 function inicia() {
     verde.style.backgroundColor = 'green';
-    botao.style.backgroundColor = 'green';
-    contadores.style.color = 'green';
-
     botao.disabled = flag;
-
-    intervalo(contadorVerde-1);
-    setTimeout(function() {
-        botao.style.backgroundColor = 'red';
-        console.log(flag);
+    Timer(function() {
         botao.disabled = true;
-        verde.style.backgroundColor = 'rgba(0, 255, 0, 0.255)';
-        amarelo.style.backgroundColor = 'yellow';
+        verde.style.backgroundColor = 'rgba(0, 255, 0, 0.255)'; 
+        amarelo.style.backgroundColor = 'yellow'; 
     }, contadorVerde*1000);
-    
+    Timer(function() {
+        botao.disabled = true;
+        verde.style.backgroundColor = 'rgba(0, 255, 0, 0.255)'; 
+        amarelo.style.backgroundColor = 'yellow'; 
+    }, 3000);
+
     Timer(function() {
         contadores.style.color = 'red';
         botao.style.backgroundColor = 'red';
@@ -93,14 +88,8 @@ function inicia() {
         intervalo(14);
 
     }, 13000);
-
     Timer(function() {
         vermelho.style.backgroundColor = 'rgba(255, 0, 0, 0.255)';
         inicia(); 
     }, 28000);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    inicia();
-});
-
