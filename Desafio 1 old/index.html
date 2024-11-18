@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Desafio 1 old</title>
+        <link rel="stylesheet" href="../Desafio 1 old/assets/style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="container" id="Header">
+            <div class="row" id="pesquisa">
+                <form class="form-inline my-2 my-lg-0">
+                    <label for="search">Pesquisar</label>
+                    <input class="form-control mr-sm-2" id="search" type="search" placeholder="Buscar..." aria-label="Search" onkeyup="buscar()">
+                </form>
+                      <select class="form-select form-select-lg" aria-label=".form-select-lg example" id="covSelect">
+                        <option selected>Todos os Convênios</option>
+                      </select>
+                    </div>
+                </nav>
+            <section id="container">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Convênio</th>
+                        <th scope="col">Preço</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabela">
+                      <tr id="tr-principal">
+                        <td id="data" scope="row"></td>
+                        <td id="num"></td>
+                        <td id="paciente">
+                            <div style="display: flex; align-items: center;">
+                                <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Padrao" id="paciente-img"><span id="paciente-span"></span> </td>
+                            </div>
+                        <td id="convenio"></td>
+                        <td id="preco"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../Desafio 1 old/assets/script.js"></script>
+    </body>
+</html>

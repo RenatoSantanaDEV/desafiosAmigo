@@ -1,10 +1,12 @@
 document.getElementById('cpf').addEventListener('input', function () {
     let cpf = this.value;
     cpf = cpf.replace(/\D/g, '');
-    if (cpf.length > 6) {
+    if (cpf.length > 9) {
         cpf = cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{0,2})$/, '$1.$2.$3-$4');
-    } else if (cpf.length > 3) {
+    } else if (cpf.length > 7) {
         cpf = cpf.replace(/^(\d{3})(\d{3})(\d{0,3})$/, '$1.$2.$3');
+    } else if (cpf.length > 3) {
+        cpf = cpf.replace(/^(\d{3})(\d{0,3})$/, '$1.$2');
     } else {
         cpf = cpf.replace(/^(\d{3})$/, '$1.');
     }
@@ -16,7 +18,7 @@ document.getElementById('nascimento').addEventListener('input', function () {
     nascimento = nascimento.replace(/\D/g, '');
     if (nascimento.length > 4) {
         nascimento = nascimento.replace(/^(\d{2})(\d{2})(\d{0,4})$/, '$1/$2/$3');
-    } else if (nascimento.length > 2) {
+    } if (nascimento.length > 2) {
         nascimento = nascimento.replace(/^(\d{2})(\d{0,2})$/, '$1/$2');
     }
     this.value = nascimento.slice(0, 10);
@@ -43,3 +45,4 @@ document.getElementById('pessoa').addEventListener('input', function () {
         console.log("O nome deve ter no máximo 50 caracteres.");
     }
 });
+

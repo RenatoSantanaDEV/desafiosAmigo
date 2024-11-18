@@ -1,0 +1,95 @@
+.btn-secondary {
+    background-color: white !important;
+    color: black !important;
+    border-color: rgb(199, 206, 212)!important;
+}
+
+.container{
+    margin: 150px;
+}
+#container{
+    margin-top: -150px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.form-inline{
+    gap: 15px;
+    margin-left: -8em;
+}
+label{
+    color: black;
+}
+
+.form-control {
+    background-color: white !important;
+    color: black !important;
+    border-color: rgb(220, 220, 227) !important;
+}
+.table thead th {
+    border-top: none;
+}
+
+.table thead th {
+    border-bottom: 1.7px solid rgb(0, 0, 0) !important;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+.table td {
+    border-top: 1px solid rgb(220, 220, 227) !important;
+}
+
+#paciente-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+span {
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: inline-block; 
+}
+
+#isTrue {
+    padding-left: 0 !important;
+    text-decoration : line-through;
+}
+
+#span-convenio{
+    padding-left: 0 !important;
+
+}
+
+#covSelect {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(220, 220, 227);
+    border-radius: 5px;
+    padding: 8px 8px;
+}
+
+#covSelect:hover {
+    border-color: #000;
+}
+
+#search:hover{
+    border-color: #000 !important;
+}
+
+#covSelect option {
+    padding: 10px;
+}
