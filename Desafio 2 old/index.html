@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Desafio 2 old</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Desafio 2 old/assets/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="container" id="Header">
+        <div class="row" id="pesquisa">
+            <div class="form-inline">
+                <label for="search">Pesquisar</label>
+                <input class="form-control mr-sm-2" id="search" type="search" placeholder="Buscar..." aria-label="Search" onkeyup="filterGuides()">
+            </div>
+            <select class="form-select form-select-lg" aria-label=".form-select-lg example" id="covSelect">
+                <option selected>Todos os Convênios</option>
+            </select>
+            <div id="date-div" class="row align-items-center">
+                <div id="start-date-div" class="col-3">
+                    <input id="input-start-date" type="date" class="form-control" onchange="filterGuides()">
+                </div>
+                <div id="final-date-div" class="col-3">
+                    <input id="input-final-date" type="date" class="form-control" onchange="filterGuides()">
+                </div>
+                <div id="div-month" class="col-2">
+                    <button id="month" class="btn btn-primary w-100" onclick="mes()">Mês</button>
+                </div>
+                <div id="div-today" class="col-2">
+                    <button id="today" class="btn btn-secondary w-100" onclick="hoje()">Hoje</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="table-container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <i class="fa-solid fa-sort-down" id="sort-icon-patient" onclick="sortDate(this)"></i> Data
+                    </th> 
+                    <th scope="col">
+                        <i class="fa-solid fa-sort-down" id="sort-icon-patient" onclick="sortNumber(this)"></i> Número
+                    </th>
+                    <th scope="col">
+                        <i class="fa-solid fa-sort-down" id="sort-icon-patient" onclick="sortName(this)"></i> Paciente
+                    </th>
+                    <th scope="col">
+                        <i class="fa-solid fa-sort-down" id="sort-icon-patient" onclick="sortInsurance(this)"></i> Convênio
+                    </th>
+                    <th scope="col">
+                        <i class="fa-solid fa-sort-down" id="sort-icon-patient" onclick="sortPrice(this)"></i> Preço
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+                <tr id="tr-principal">
+                    <td id="data" scope="row"></td>
+                    <td id="num"></td>
+                    <td id="paciente">
+                        <div style="display: flex; align-items: center;">
+                            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Padrao" id="paciente-img">
+                            <span id="paciente-span"></span>
+                        </div>
+                    </td>
+                    <td id="convenio"></td>
+                    <td id="preco"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="paginacao" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a id="first-page" class="page-link">Primeiro</a>
+                </li>
+                <li class="page-item">
+                    <a id="previous-page" class="page-link">Anterior</a>
+                </li>
+                <li id="page-item-parent" class="page-item"></li>
+                <li class="page-item">
+                    <a id="next-page" class="page-link">Próximo</a>
+                </li>
+                <li class="page-item">
+                    <a id="last-page" class="page-link">Último</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../Desafio 2 old/assets/script.js"></script>
+</body>
+</html>
